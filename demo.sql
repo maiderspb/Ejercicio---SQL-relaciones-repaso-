@@ -45,7 +45,7 @@ CREATE TABLE `Order_Product` (
     FOREIGN KEY (product_id) REFERENCES `Product`(product_id)
     ) 
 
- INSERT INTO `User` (name, email, password, address) VALUES
+INSERT INTO `User` (name, email, password, address) VALUES
 ('Juan Pérez', 'juan.perez@email.com', 'password123', 'Calle Gran Via 6'),
 ('Ana López', 'ana.lopez@email.com', 'password456', 'Calle Elcano 8'),
 ('Carlos García', 'carlos.garcia@email.com', 'password789', 'Ercilla 10'),
