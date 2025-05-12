@@ -1,4 +1,4 @@
-CREATE DATABASE `ecommerce_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE `ecommerce_db` 
 
 USE `ecommerce_db`;
 
@@ -10,13 +10,13 @@ password VARCHAR(100) NOT NULL,
 address VARCHAR(100) NOT NULL,
 PRIMARY KEY (user_id),
 UNIQUE KEY (email)) 
-ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 CREATE TABLE `Category` (
     category_id INT AUTO_INCREMENT NOT NULL,
     category_name VARCHAR(100) NOT NULL,
     PRIMARY KEY (category_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 CREATE TABLE `Product` (
     product_id INT AUTO_INCREMENT NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE `Product` (
     category_id INT,
     PRIMARY KEY (product_id),
     FOREIGN KEY (category_id) REFERENCES `Category`(category_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 
 
 CREATE TABLE `Order` (
     order_id INT AUTO_INCREMENT NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `Order` (
     total_amount DECIMAL(10, 2),
     PRIMARY KEY (order_id),
     FOREIGN KEY (user_id) REFERENCES `User`(user_id)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    ) 
 
 
 CREATE TABLE `Order_Product` (
@@ -45,7 +45,7 @@ CREATE TABLE `Order_Product` (
     PRIMARY KEY (order_id, product_id),
     FOREIGN KEY (order_id) REFERENCES `Order`(order_id),
     FOREIGN KEY (product_id) REFERENCES `Product`(product_id)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    ) 
 
     INSERT INTO `User` (name, email, password, address) VALUES
 ('Juan Pérez', 'juan.perez@email.com', 'password123', 'Calle Gran Via 6'),
