@@ -11,7 +11,6 @@ address VARCHAR(100) NOT NULL,
 PRIMARY KEY (user_id),
 UNIQUE KEY (email)) 
 
-
 CREATE TABLE `Category` (
     category_id INT AUTO_INCREMENT NOT NULL,
     category_name VARCHAR(100) NOT NULL,
@@ -37,7 +36,6 @@ CREATE TABLE `Order` (
     FOREIGN KEY (user_id) REFERENCES `User`(user_id)
     ) 
 
-
 CREATE TABLE `Order_Product` (
     order_id INT,
     product_id INT,
@@ -47,7 +45,7 @@ CREATE TABLE `Order_Product` (
     FOREIGN KEY (product_id) REFERENCES `Product`(product_id)
     ) 
 
-    INSERT INTO `User` (name, email, password, address) VALUES
+ INSERT INTO `User` (name, email, password, address) VALUES
 ('Juan Pérez', 'juan.perez@email.com', 'password123', 'Calle Gran Via 6'),
 ('Ana López', 'ana.lopez@email.com', 'password456', 'Calle Elcano 8'),
 ('Carlos García', 'carlos.garcia@email.com', 'password789', 'Ercilla 10'),
