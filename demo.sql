@@ -50,7 +50,7 @@ INSERT INTO `User` (name, email, password, address) VALUES
 ('Ana López', 'ana.lopez@email.com', 'password456', 'Calle Elcano 8'),
 ('Carlos García', 'carlos.garcia@email.com', 'password789', 'Ercilla 10'),
 ('María Rodríguez', 'maria.rodriguez@email.com', 'password101', 'Henao 12'),
-('Pedro Martínez', 'pedro.martinez@email.com', 'password102', 'Inadutxu 14');
+('Pedro Martínez', 'pedro.martinez@email.com', 'password102', 'Indautxu 14');
 
 INSERT INTO `Category` (category_name) VALUES
 ('Ropa'),
