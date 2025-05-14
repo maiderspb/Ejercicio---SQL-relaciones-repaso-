@@ -83,6 +83,9 @@ WHERE product_id = 8;
 SELECT * FROM `Product`
 WHERE price > 20.00;
 
+SELECT * FROM Product
+ORDER BY name DESC;
+
 SELECT * FROM `Product`
 ORDER BY price DESC;
 
